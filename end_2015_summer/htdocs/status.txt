@@ -1,0 +1,7 @@
+Local server
+
+- Lighting
+	- Polygon + canvas intersection
+- Raycasting
+	- Somewhat decent draw order (backdrop -> terrain -> player -> raycasts)
+- Collisions worked at one time, but I removed them to test lighting

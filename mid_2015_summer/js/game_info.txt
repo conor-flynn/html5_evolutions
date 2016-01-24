@@ -1,0 +1,46 @@
+
+
+Class
+	Engine(*canvas, *content, *input)
+		GameSetup('Runner')
+			Main(canvas, content, input, Environment, App[Game])						
+				GameRunner(Player) - initializes 'game-static' variables like Environment
+-------------------------------------------------------------------------------
+					Player
+
+
+
+
+
+
+Entity
+	Dynamic Entity
+		Player
+		NPC
+	Static Entity
+		Interactable
+		Terrain
+			Wall
+
+
+
+
+
+
+
+
+
+TODO
+	
+	- Console for commands
+	- Test environments
+
+
+
+
+
+Info:
+		
+	Web worker example
+		https://www.youtube.com/watch?v=WBmttwfA_k8
+		6:59

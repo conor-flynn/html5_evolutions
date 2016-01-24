@@ -1,0 +1,7 @@
+Standalone
+
+- Player movement (Camera focused on player)
+
+- Terrain drawing
+
+- No collision

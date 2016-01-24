@@ -1,0 +1,5 @@
+Standalone
+
+- Game runs (no drawing)
+
+- Canvas setup

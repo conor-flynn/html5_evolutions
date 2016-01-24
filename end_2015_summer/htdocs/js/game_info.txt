@@ -1,0 +1,200 @@
+
+
+Class
+	Engine(*canvas, *content, *input)
+		GameSetup('Runner')
+			Main(canvas, content, input, Environment, App[Game])						
+				GameRunner(Player) - initializes 'game-static' variables like Environment
+-------------------------------------------------------------------------------
+					Player
+
+
+
+
+
+
+Entity
+	Dynamic Entity
+		Player
+		NPC
+	Static Entity
+		Interactable
+		Terrain
+			Wall
+
+
+
+
+
+DONE
+	
+	- Raycasting
+
+
+
+TODO
+	
+	- Specific renderer
+	- Diagnol collisions dont' work when pixel perfect
+	- During collisions, move entity the max distance
+	- Console for commands
+	- Vision & Lighting
+
+
+
+
+
+Info:
+		
+	Web worker example
+		https://www.youtube.com/watch?v=WBmttwfA_k8
+		6:59
+	Pixel smoothing with pixel art graphics
+		https://forums.handmadehero.org/jace/videos/game-architecture/day093.html
+		QA: 1:06:27
+	
+
+
+
+
+
+
+
+
+
+Collision detection	
+	Different objects belong to layers (based on type: floor, walls, entities)
+	Only detecting with given layers
+
+Manual world creation
+
+Lighting
+	Base v True
+
+Converting tile chunks to larger bitmaps
+
+Z-levels
+	Storage as Vector3
+	Drawing
+
+Perma storing worlds
+
+AI
+	Pathfinding
+	Processing offscreen
+
+Audio
+
+Animation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TODO:
+	Create a triangle with transparent edges and test things
+	Test circles or triangles (images with transparent pieces/edges)
+
+
+
+Lighting
+	
+
+	Functions
+		- get portion of image that intersects with some polygon
+			01
+			02
+
+
+	Scenarios
+		: 01
+			Person is half normal, half drawn under layers that would normally 
+				be below the person
+		: 02
+			Person is half normal, half invisible
+		: 03
+
+
+
+
+
+
+
+
+
+
+
+True sight
+	seeing what is truly there realtime
+Base sight
+	seeing the gist of what is there
+Sense sight
+	controls sight of 'Base'
+
+
+Sense sight
+	Base sight
+		True sight
+
+
+
+
+Sense sight
+	Blocked by significant line of sight
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TODO
+	Zooming in and out
+	Tiles -> Blocks
+	SIMD
+	Not to do now, but can Dark/Light/Sense be optimized?
+		- Draw a flashlight and see what 'Light' objects overlap, then we only draw those light objects using the Dark/Light layering
+		- The 'Light' lighting for the background should be through normal shading rather than 	Dark/Light layering
+	Multithreading
+
+
+
+
+
+Drawing text is very expensive, but it is static.
+	Prender the text to its own canvas object and then store that canvas object for future render
+	(But we still are dealing with copying from one canvas to another, doens't work in large canvas's)
+When raycasting, move 'beginPath()' and 'stroke()' outside of the loop. The result is a disjointed poly, but is more efficient. However, you can't individually color the lines

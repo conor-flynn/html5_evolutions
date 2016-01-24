@@ -1,0 +1,9 @@
+Standalone
+
+- Polygon drawing
+
+- Raycasting
+
+- Game runs
+
+- Canvas setup

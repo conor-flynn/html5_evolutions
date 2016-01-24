@@ -1,0 +1,10 @@
+*** Latest working code STANDALONE code (does not require apache to host a local server)
+
+
+- No lighting
+
+- Raycasting (Cause why the hell not)
+
+- Collision detection (Highlights terrain pieces around the character to show what is checked for collision detection)
+
+- Environment management (Terrain is in chunks denoted by the blue and yellow squares, and only 'nearby' chunks are loaded)
